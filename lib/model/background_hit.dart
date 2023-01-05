@@ -79,24 +79,18 @@ class Status {
   Status({
     required this.error,
     required this.login,
-    required this.userId,
-    required this.role,
     required this.apiVer,
     required this.devDebugParam,
   });
 
   int error;
   bool login;
-  String userId;
-  String role;
   String apiVer;
   String devDebugParam;
 
   factory Status.fromJson(Map<String, dynamic> json) => Status(
         error: json["error"],
         login: json["login"],
-        userId: json["user_id"],
-        role: json["role"],
         apiVer: json["api-ver"],
         devDebugParam: json["dev-debug-param"],
       );
@@ -104,8 +98,6 @@ class Status {
   Map<String, dynamic> toJson() => {
         "error": error,
         "login": login,
-        "user_id": userId,
-        "role": role,
         "api-ver": apiVer,
         "dev-debug-param": devDebugParam,
       };
