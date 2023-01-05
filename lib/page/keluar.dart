@@ -211,7 +211,7 @@ class _KeluarPageState extends State<KeluarPage> {
               children: [
                 Container(
                   margin: EdgeInsets.only(left: 15),
-                  width: 262,
+                  width: 230,
                   height: 30,
                   child: TextFormField(
                     textAlign: TextAlign.right,
@@ -438,7 +438,7 @@ class _KeluarPageState extends State<KeluarPage> {
                 ),
               ),
             ),
-            SizedBox(height: 255,),
+            SizedBox(height: 50,),
             Container(
               width: 120,
               child: ElevatedButton(

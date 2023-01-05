@@ -254,7 +254,7 @@ class _PindahPageState extends State<PindahPage> {
               children: [
                 Container(
                   margin: EdgeInsets.only(left: 15),
-                  width: 262,
+                  width: 230,
                   height: 30,
                   child: TextFormField(
                     textAlign: TextAlign.right,
@@ -481,7 +481,7 @@ class _PindahPageState extends State<PindahPage> {
                 ),
               ),
             ),
-            SizedBox(height: 300,),
+            SizedBox(height: 100,),
             Container(
               width: 120,
               child: ElevatedButton(
