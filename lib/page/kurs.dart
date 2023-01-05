@@ -147,7 +147,7 @@ class _KursPageState extends State<KursPage> {
               children: [
                 Container(
                   margin: EdgeInsets.only(left: 15),
-                  width: 262,
+                  width: 230,
                   height: 30,
                   child: TextFormField(
                     textAlign: TextAlign.right,
@@ -283,7 +283,7 @@ class _KursPageState extends State<KursPage> {
               children: [
                 Container(
                   margin: EdgeInsets.only(left: 15),
-                  width: 262,
+                  width: 230,
                   height: 30,
                   child: TextFormField(
                     textAlign: TextAlign.right,
@@ -407,7 +407,7 @@ class _KursPageState extends State<KursPage> {
               ],
             ),
             SizedBox(
-              height: 450,
+              height: 275,
             ),
             Container(
               width: 120,
