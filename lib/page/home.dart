@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
+import 'package:test_tech_flutter/model/background_hit.dart';
 import 'package:test_tech_flutter/model/init_data.dart';
 import 'package:test_tech_flutter/page/keluar.dart';
 import 'package:test_tech_flutter/page/kurs.dart';
@@ -18,6 +21,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   bool _sliderOn = false;
   bool _isLoading = true;
+  Timer? timer;
   List<TrxTipe> Trxtipe = [];
 
   Future<void> trxTipe() async {
@@ -33,10 +37,23 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
+  Future<void> backgroundHit() async {
+    BackgroundHit result = await APIService().backgroundHit();
+    print("Background hit Success");
+  }
+
   @override
   void initState() {
     trxTipe();
+    backgroundHit();
+    timer = Timer.periodic(Duration(seconds: 30), (Timer t) => backgroundHit());
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    timer?.cancel();
+    super.dispose();
   }
 
   Widget slider_items(String title, String val, int color) {
