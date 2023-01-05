@@ -1,7 +1,11 @@
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:test_tech_flutter/model/init_data.dart';
+import 'package:test_tech_flutter/page/keluar.dart';
+import 'package:test_tech_flutter/page/kurs.dart';
 import 'package:test_tech_flutter/page/masuk.dart';
+import 'package:test_tech_flutter/page/mutasi.dart';
+import 'package:test_tech_flutter/page/pindah.dart';
 import 'package:test_tech_flutter/service/api_service.dart';
 
 class HomePage extends StatefulWidget {
@@ -347,7 +351,13 @@ class _HomePageState extends State<HomePage> {
                                                     width: 30,
                                                     height: 30,
                                                   ),
-                                                  onTap: () {},
+                                                  onTap: () {
+                                                    Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) =>
+                                                                KeluarPage()));
+                                                  },
                                                 ),
                                                 Text(
                                                   Trxtipe[1].nama,
@@ -370,7 +380,13 @@ class _HomePageState extends State<HomePage> {
                                                     width: 30,
                                                     height: 30,
                                                   ),
-                                                  onTap: () {},
+                                                  onTap: () {
+                                                    Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) =>
+                                                                PindahPage()));
+                                                  },
                                                 ),
                                                 Text(
                                                   Trxtipe[2].nama,
@@ -393,7 +409,13 @@ class _HomePageState extends State<HomePage> {
                                                     width: 30,
                                                     height: 30,
                                                   ),
-                                                  onTap: () {},
+                                                  onTap: () {
+                                                    Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) =>
+                                                                MutasiPage()));
+                                                  },
                                                 ),
                                                 Text(
                                                   'MUTASI',
@@ -416,7 +438,13 @@ class _HomePageState extends State<HomePage> {
                                                     width: 30,
                                                     height: 30,
                                                   ),
-                                                  onTap: () {},
+                                                  onTap: () {
+                                                    Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) =>
+                                                                KursPage()));
+                                                  },
                                                 ),
                                                 Text(
                                                   'KURS',
