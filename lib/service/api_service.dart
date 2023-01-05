@@ -127,7 +127,9 @@ class APIService {
     print("RAW INITDATA: " + body.toString());
     print("URL INITDATA: " + ServerConfig.baseURL + ServerConfig.initData);
     Uri uri = Uri.parse(ServerConfig.baseURL + ServerConfig.initData);
-    final newURI = uri.replace(queryParameters: body);
+    final newURI = uri.replace(
+        queryParameters:
+            body.map((key, value) => MapEntry(key, value.toString())));
     final res = await http.get(newURI, headers: headers);
     print("STATUS CODE(INITDATA): " + res.statusCode.toString());
     print("RES INITDATA: " + res.body.toString());
